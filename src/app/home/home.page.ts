@@ -8,10 +8,7 @@ import { Component } from '@angular/core';
 export class HomePage {
   title = 'タスク登録';
   task: string;
-  tasks: {name: string}[] = [
-    {name: 'タスク1'},
-    {name: 'タスク2'},
-  ];
+  tasks: { name: string}[];
 
   constructor() {}
 
@@ -20,6 +17,7 @@ export class HomePage {
       this.tasks = JSON.parse(localStorage.tasks);
     }
   }
+
   addTask() {
     this.tasks.push({
       name: this.task
